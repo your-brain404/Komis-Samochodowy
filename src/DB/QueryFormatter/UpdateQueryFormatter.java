@@ -1,9 +1,9 @@
 package DB.QueryFormatter;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class UpdateQueryFormatter {
-    public static String getValues(HashMap<String, String> data) {
+    public static String getValues(LinkedHashMap<String, String> data) {
         String values = "";
         int i = 0;
         for (String key : data.keySet()) {

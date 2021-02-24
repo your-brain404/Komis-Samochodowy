@@ -3,7 +3,7 @@ package DB;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import DB.QueryFormatter.InsertQueryFormatter;
 import DB.QueryFormatter.UpdateQueryFormatter;
@@ -29,12 +29,12 @@ public final class DB {
 
     }
 
-    public void update(String table, HashMap<String, String> data, int id) throws Exception {
+    public void update(String table, LinkedHashMap<String, String> data, int id) throws Exception {
         String values = UpdateQueryFormatter.getValues(data);
         try {
             PreparedStatement statement = this.connection
                     .prepareStatement("UPDATE " + table + " SET " + values + " WHERE id = " + id);
-            statement.executeUpdate();
+            // statement.executeUpdate();
         } catch (Exception e) {
             System.out.println(e);
         } finally {
@@ -54,7 +54,7 @@ public final class DB {
         }
     }
 
-    public void insert(String table, HashMap<String, String> data) throws Exception {
+    public void insert(String table, LinkedHashMap<String, String> data) throws Exception {
         String columns = InsertQueryFormatter.getColumns(data);
         String values = InsertQueryFormatter.getValues(data);
         try {

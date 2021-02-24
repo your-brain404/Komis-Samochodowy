@@ -1,9 +1,9 @@
 package DB.QueryFormatter;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class InsertQueryFormatter {
-    public static String getColumns(HashMap<String, String> data) {
+    public static String getColumns(LinkedHashMap<String, String> data) {
         String columns = "";
         int i = 0;
         for (String key : data.keySet()) {
@@ -15,7 +15,7 @@ public class InsertQueryFormatter {
         return columns;
     }
 
-    public static String getValues(HashMap<String, String> data) {
+    public static String getValues(LinkedHashMap<String, String> data) {
         String values = "";
         int i = 0;
         for (String key : data.values()) {

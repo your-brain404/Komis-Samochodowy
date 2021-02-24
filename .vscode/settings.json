@@ -1,6 +1,10 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "c:\\Users\\Daniel\\Desktop\\mysql-connector-java-8.0.23.jar"
+        "c:\\Users\\Daniel\\Desktop\\mysql-connector-java-8.0.23.jar",
+        "c:\\Users\\Daniel\\Downloads\\junit-4.13.2.jar",
+        "c:\\Users\\Daniel\\Downloads\\junit-jupiter-5.7.0.jar",
+        "c:\\Users\\Daniel\\Downloads\\junit-jupiter-api-5.7.0.jar",
+        "c:\\Users\\Daniel\\Downloads\\hamcrest-core-1.3.jar"
     ]
 }
